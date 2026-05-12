@@ -1,0 +1,77 @@
+.footer {
+  background: var(--cream);
+  border-top: 1px solid var(--gray-light);
+  padding: 2.5rem 4rem;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.logoMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--yellow);
+  border-radius: 3px;
+  font-size: 1rem;
+  margin-right: 2px;
+}
+
+.tagline {
+  font-size: 0.8rem;
+  color: var(--gray);
+  border-left: 1px solid var(--gray-light);
+  padding-left: 1.5rem;
+  font-weight: 300;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  font-size: 0.85rem;
+  color: var(--gray);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav a:hover { color: var(--black); }
+
+.copy {
+  font-size: 0.78rem;
+  color: var(--gray);
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .footer { padding: 2rem 1.5rem; }
+  .inner { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .nav { flex-wrap: wrap; gap: 1rem; }
+  .tagline { display: none; }
+}
