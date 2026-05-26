@@ -1,0 +1,253 @@
+.page {
+  padding: 10rem 4rem 6rem;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.blob1 {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #F7E96B 0%, #FDF7C3 40%, transparent 70%);
+  border-radius: 50%;
+  top: -5%;
+  right: -5%;
+  opacity: 0.4;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.blob2 {
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #F2DC3A 0%, transparent 65%);
+  border-radius: 50%;
+  bottom: 10%;
+  left: -3%;
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.gridBg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  margin-bottom: 4rem;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}
+
+.title {
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.title em { font-style: italic; }
+
+.sub {
+  font-size: 1rem;
+  color: var(--gray);
+  line-height: 1.65;
+  font-weight: 300;
+  max-width: 520px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.agentCard {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(232, 230, 223, 0.5);
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: box-shadow 0.25s;
+}
+
+.agentCard:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+}
+
+.agentTop {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--yellow-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.agentInfo {
+  flex: 1;
+}
+
+.agentName {
+  font-family: var(--serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+.agentTitle {
+  font-size: 0.85rem;
+  color: var(--yellow-dark);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.agentDesc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--gray);
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.agentContact {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.agentContact a,
+.agentContact span {
+  font-size: 0.85rem;
+  color: var(--black);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: opacity 0.2s;
+}
+
+.agentContact a:hover { opacity: 0.5; }
+
+.ofertyAgent {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--gray-lighter);
+}
+
+.ofertyLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.ofertyGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.ofertaMini {
+  display: block;
+  background: var(--cream);
+  border: 1px solid var(--gray-light);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.ofertaMini:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.ofertaMiniTyp {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--yellow-dark);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.ofertaMiniTytul {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  color: var(--black);
+}
+
+.ofertaMiniCena {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.ofertaMiniLokalizacja {
+  font-size: 0.75rem;
+  color: var(--gray);
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .page { padding: 8rem 1.5rem 4rem; }
+
+  .agentTop {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .agentContact { justify-content: center; }
+
+  .ofertyGrid { grid-template-columns: 1fr; }
+
+  .agentCard { padding: 1.5rem; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .ofertyGrid { grid-template-columns: repeat(2, 1fr); }
+}

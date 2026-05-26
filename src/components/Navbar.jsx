@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const { pathname } = useLocation()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -11,30 +13,35 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [pathname])
+
   const links = [
-    { label: 'O nas', href: '#about' },
-    { label: 'Oferta', href: '#offer' },
-    { label: 'Dlaczego my', href: '#why' },
-    { label: 'Kontakt', href: '#contact' },
+    { label: 'Strona główna', to: '/' },
+    { label: 'Oferty', to: '/oferty' },
+    { label: 'Agenci', to: '/agenci' },
+    { label: 'O nas', to: '/o-nas' },
+    { label: 'Kontakt', to: '/kontakt' },
   ]
 
   return (
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
-      <a href="#top" className={styles.logo}>
+      <Link to="/" className={styles.logo}>
         <span className={styles.logoMark}>E</span>
         <span className={styles.logoText}>statum</span>
-      </a>
+      </Link>
 
       <ul className={`${styles.links} ${menuOpen ? styles.open : ''}`}>
         {links.map(l => (
-          <li key={l.href}>
-            <a href={l.href} onClick={() => setMenuOpen(false)}>{l.label}</a>
+          <li key={l.to}>
+            <Link to={l.to} onClick={() => setMenuOpen(false)}>{l.label}</Link>
           </li>
         ))}
         <li>
-          <a href="#contact" className={styles.cta} onClick={() => setMenuOpen(false)}>
+          <Link to="/kontakt" className={styles.cta} onClick={() => setMenuOpen(false)}>
             Umów spotkanie
-          </a>
+          </Link>
         </li>
       </ul>
 
