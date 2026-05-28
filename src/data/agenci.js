@@ -8,6 +8,7 @@ const agenci = [
     telefon: '+48 22 123 45 60',
     email: 'anna.kowalska@estatum.pl',
     oferty_ids: [1, 2, 8],
+    zdjecie: '/Gemini_Generated_Image_90yerc90yerc90ye.png',
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const agenci = [
     telefon: '+48 22 123 45 61',
     email: 'tomasz.nowak@estatum.pl',
     oferty_ids: [3, 4],
+    zdjecie: '/Gemini_Generated_Image_egcmt0egcmt0egcm.png',
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const agenci = [
     telefon: '+48 22 123 45 62',
     email: 'marta.wisniewska@estatum.pl',
     oferty_ids: [7, 9],
+    zdjecie: '/Gemini_Generated_Image_p2xvfwp2xvfwp2xv.png',
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ const agenci = [
     telefon: '+48 22 123 45 63',
     email: 'piotr.lewandowski@estatum.pl',
     oferty_ids: [5, 6],
+    zdjecie: '/Gemini_Generated_Image_wltbpfwltbpfwltb.png',
   },
 ]
 

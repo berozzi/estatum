@@ -44,7 +44,7 @@ export default function ONasPage() {
 
         <div className={styles.sectionBlock}>
           <div className={styles.sectionImage}>
-            <span>🏢</span>
+            <img src="/office-outside.webp" alt="Nasze biuro" />
           </div>
           <div className={styles.sectionContent}>
             <h3>Nasze biuro w sercu Warszawy</h3>
@@ -70,7 +70,7 @@ export default function ONasPage() {
             </p>
           </div>
           <div className={styles.sectionImage}>
-            <span>⭐</span>
+            <img src="/ChatGPT%20Image%2028%20maj%202026%2C%2011_58_00.png" alt="Nasze wartości" />
           </div>
         </div>
 

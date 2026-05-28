@@ -7,10 +7,7 @@ export default function About() {
         <div className={styles.left}>
           <div className={styles.imageWrap}>
             <div className={styles.imagePlaceholder}>
-              <div className={styles.imageInner}>
-                <span className={styles.imageIcon}>Miejsce na zdjęcie</span>
-                <p className={styles.imageCaption}>Nasze biuro · ul. Mokotowska 12, Warszawa</p>
-              </div>
+              <img src="/office2.png" alt="Nasze biuro" />
             </div>
             <div className={styles.accent} />
           </div>

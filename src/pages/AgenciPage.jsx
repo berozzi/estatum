@@ -37,7 +37,7 @@ export default function AgenciPage() {
             return (
               <div key={a.id} className={styles.agentCard}>
                 <div className={styles.agentTop}>
-                  <div className={styles.photo}>👤</div>
+                  <div className={styles.photo}><img src={a.zdjecie} alt={`${a.imie} ${a.nazwisko}`} /></div>
                   <div className={styles.agentInfo}>
                     <h2 className={styles.agentName}>
                       {a.imie} {a.nazwisko}
